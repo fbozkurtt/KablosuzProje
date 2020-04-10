@@ -85,7 +85,7 @@ namespace KablosuzProje
                 Convert.ToDouble(txt_r1.Text), Convert.ToDouble(txt_r2.Text), Convert.ToDouble(txt_r3.Text));
             mp.X = p.X * 25;
             mp.Y = p.Y * 25;
-            lbl_location.Text = $"({p.X},{p.Y})";
+            lbl_location.Text = $"({p.X} . {p.Y})";
             pictureBox.Refresh();
         }
 
@@ -128,7 +128,7 @@ namespace KablosuzProje
 
                 var x = (Form1.MousePosition.X - Form1.ActiveForm.DesktopLocation.X - 22) / 25.0;
                 var y = (Form1.MousePosition.Y - Form1.ActiveForm.DesktopLocation.Y - 45) / 25.0;
-                lbl_coordinates.Text = $"({x},{y})";
+                lbl_coordinates.Text = $"({x}. {y})";
             }
             catch
             {
@@ -141,7 +141,7 @@ namespace KablosuzProje
             mp.X = (Form1.MousePosition.X - Form1.ActiveForm.DesktopLocation.X - 22);
             mp.Y = (Form1.MousePosition.Y - Form1.ActiveForm.DesktopLocation.Y - 45);
 
-            lbl_location.Text = $"({mp.X / 25.0},{mp.Y / 25.0})";
+            lbl_location.Text = $"({mp.X / 25.0} . {mp.Y / 25.0})";
             pictureBox.Refresh();
         }
     }

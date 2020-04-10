@@ -154,7 +154,7 @@
             this.txt_r1.Name = "txt_r1";
             this.txt_r1.Size = new System.Drawing.Size(100, 26);
             this.txt_r1.TabIndex = 6;
-            this.txt_r1.Text = "3,16";
+            this.txt_r1.Text = "3,16227766";
             // 
             // groupBox2
             // 
@@ -317,9 +317,9 @@
             this.lbl_location.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.lbl_location.Location = new System.Drawing.Point(520, 449);
             this.lbl_location.Name = "lbl_location";
-            this.lbl_location.Size = new System.Drawing.Size(54, 25);
+            this.lbl_location.Size = new System.Drawing.Size(66, 25);
             this.lbl_location.TabIndex = 10;
-            this.lbl_location.Text = "(x,y)";
+            this.lbl_location.Text = "(x . y)";
             // 
             // btn_about
             // 
@@ -336,11 +336,11 @@
             // 
             this.lbl_coordinates.AutoSize = true;
             this.lbl_coordinates.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_coordinates.Location = new System.Drawing.Point(660, 401);
+            this.lbl_coordinates.Location = new System.Drawing.Point(519, 401);
             this.lbl_coordinates.Name = "lbl_coordinates";
-            this.lbl_coordinates.Size = new System.Drawing.Size(32, 16);
+            this.lbl_coordinates.Size = new System.Drawing.Size(38, 16);
             this.lbl_coordinates.TabIndex = 12;
-            this.lbl_coordinates.Text = "(x,y)";
+            this.lbl_coordinates.Text = "(x . y)";
             // 
             // Form1
             // 
