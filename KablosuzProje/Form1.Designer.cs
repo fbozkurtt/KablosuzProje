@@ -35,19 +35,26 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txt_r1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.txt_r2x = new System.Windows.Forms.TextBox();
+            this.txt_r2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_r2y = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.txt_r3x = new System.Windows.Forms.TextBox();
+            this.txt_r3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_r3y = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lbl_location = new System.Windows.Forms.Label();
             this.btn_about = new System.Windows.Forms.Button();
+            this.lbl_coordinates = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -64,6 +71,7 @@
             this.pictureBox.TabStop = false;
             this.pictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox_Paint);
             this.pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseClick);
+            this.pictureBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseMove);
             // 
             // btn_execute
             // 
@@ -116,6 +124,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txt_r1);
             this.groupBox1.Controls.Add(this.txt_r1x);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txt_r1y);
@@ -123,24 +133,53 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(519, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(229, 100);
+            this.groupBox1.Size = new System.Drawing.Size(229, 125);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "B1";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(112, 92);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(23, 20);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "r1";
+            // 
+            // txt_r1
+            // 
+            this.txt_r1.Location = new System.Drawing.Point(6, 92);
+            this.txt_r1.MaxLength = 64;
+            this.txt_r1.Name = "txt_r1";
+            this.txt_r1.Size = new System.Drawing.Size(100, 26);
+            this.txt_r1.TabIndex = 6;
+            this.txt_r1.Text = "3,16";
+            // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.txt_r2x);
+            this.groupBox2.Controls.Add(this.txt_r2);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.txt_r2y);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(519, 119);
+            this.groupBox2.Location = new System.Drawing.Point(519, 144);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(229, 100);
+            this.groupBox2.Size = new System.Drawing.Size(229, 125);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "B2";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(112, 92);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(23, 20);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "r2";
             // 
             // txt_r2x
             // 
@@ -151,6 +190,15 @@
             this.txt_r2x.TabIndex = 2;
             this.txt_r2x.Text = "5";
             this.txt_r2x.TextChanged += new System.EventHandler(this.txt_r1x_TextChanged);
+            // 
+            // txt_r2
+            // 
+            this.txt_r2.Location = new System.Drawing.Point(6, 92);
+            this.txt_r2.MaxLength = 64;
+            this.txt_r2.Name = "txt_r2";
+            this.txt_r2.Size = new System.Drawing.Size(100, 26);
+            this.txt_r2.TabIndex = 8;
+            this.txt_r2.Text = "2";
             // 
             // label3
             // 
@@ -182,17 +230,28 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.txt_r3x);
+            this.groupBox3.Controls.Add(this.txt_r3);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.txt_r3y);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(519, 225);
+            this.groupBox3.Location = new System.Drawing.Point(519, 273);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(229, 100);
+            this.groupBox3.Size = new System.Drawing.Size(229, 125);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "B3";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(112, 92);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(23, 20);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "r3";
             // 
             // txt_r3x
             // 
@@ -203,6 +262,15 @@
             this.txt_r3x.TabIndex = 2;
             this.txt_r3x.Text = "8";
             this.txt_r3x.TextChanged += new System.EventHandler(this.txt_r1x_TextChanged);
+            // 
+            // txt_r3
+            // 
+            this.txt_r3.Location = new System.Drawing.Point(6, 92);
+            this.txt_r3.MaxLength = 64;
+            this.txt_r3.Name = "txt_r3";
+            this.txt_r3.Size = new System.Drawing.Size(100, 26);
+            this.txt_r3.TabIndex = 10;
+            this.txt_r3.Text = "3";
             // 
             // label5
             // 
@@ -236,7 +304,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(521, 372);
+            this.label7.Location = new System.Drawing.Point(521, 425);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 24);
             this.label7.TabIndex = 9;
@@ -247,7 +315,7 @@
             this.lbl_location.AutoSize = true;
             this.lbl_location.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_location.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lbl_location.Location = new System.Drawing.Point(613, 372);
+            this.lbl_location.Location = new System.Drawing.Point(520, 449);
             this.lbl_location.Name = "lbl_location";
             this.lbl_location.Size = new System.Drawing.Size(54, 25);
             this.lbl_location.TabIndex = 10;
@@ -264,11 +332,22 @@
             this.btn_about.UseVisualStyleBackColor = true;
             this.btn_about.Click += new System.EventHandler(this.btn_about_Click);
             // 
+            // lbl_coordinates
+            // 
+            this.lbl_coordinates.AutoSize = true;
+            this.lbl_coordinates.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_coordinates.Location = new System.Drawing.Point(660, 401);
+            this.lbl_coordinates.Name = "lbl_coordinates";
+            this.lbl_coordinates.Size = new System.Drawing.Size(32, 16);
+            this.lbl_coordinates.TabIndex = 12;
+            this.lbl_coordinates.Text = "(x,y)";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 524);
+            this.Controls.Add(this.lbl_coordinates);
             this.Controls.Add(this.btn_about);
             this.Controls.Add(this.lbl_location);
             this.Controls.Add(this.label7);
@@ -317,6 +396,13 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lbl_location;
         private System.Windows.Forms.Button btn_about;
+        private System.Windows.Forms.Label lbl_coordinates;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txt_r1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txt_r2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txt_r3;
     }
 }
 
