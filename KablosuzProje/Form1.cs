@@ -138,11 +138,28 @@ namespace KablosuzProje
 
         private void pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            mp.X = (Form1.MousePosition.X - Form1.ActiveForm.DesktopLocation.X - 22);
-            mp.Y = (Form1.MousePosition.Y - Form1.ActiveForm.DesktopLocation.Y - 45);
-
-            lbl_location.Text = $"({mp.X / 25.0} . {mp.Y / 25.0})";
-            pictureBox.Refresh();
+            try
+            {
+                mp.X = (Form1.MousePosition.X - Form1.ActiveForm.DesktopLocation.X - 22);
+                mp.Y = (Form1.MousePosition.Y - Form1.ActiveForm.DesktopLocation.Y - 45);
+                double r1 = Math.Sqrt(Math.Pow(Convert.ToDouble(txt_r1x.Text) * 25 - Convert.ToDouble(mp.X), 2) + Math.Pow(Convert.ToDouble(txt_r1y.Text) * 25 - Convert.ToDouble(mp.Y), 2)) / 25.0;
+                double r2 = Math.Sqrt(Math.Pow(Convert.ToDouble(txt_r2x.Text) * 25 - Convert.ToDouble(mp.X), 2) + Math.Pow(Convert.ToDouble(txt_r2y.Text) * 25 - Convert.ToDouble(mp.Y), 2)) / 25.0;
+                double r3 = Math.Sqrt(Math.Pow(Convert.ToDouble(txt_r3x.Text) * 25 - Convert.ToDouble(mp.X), 2) + Math.Pow(Convert.ToDouble(txt_r3y.Text) * 25 - Convert.ToDouble(mp.Y), 2)) / 25.0;
+                PointF Location = Calculate(new Point(Convert.ToInt16(txt_r1x.Text), Convert.ToInt16(txt_r1y.Text)),
+                    new Point(Convert.ToInt16(txt_r2x.Text), Convert.ToInt16(txt_r2y.Text)),
+                    new Point(Convert.ToInt16(txt_r3x.Text), Convert.ToInt16(txt_r3y.Text)),
+                    r1, r2, r3
+                    );
+                txt_r1.Text = r1.ToString();
+                txt_r2.Text = r2.ToString();
+                txt_r3.Text = r3.ToString();
+                lbl_location.Text = $"({Location.X:#.##} . {Location.Y:#.##})";
+                pictureBox.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
